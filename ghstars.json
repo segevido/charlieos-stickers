@@ -1,0 +1,20 @@
+{
+  "format": 1,
+  "id": "ghstars",
+  "name": "GitHub stars",
+  "version": "1.0.0",
+  "author": "CharlieOS",
+  "summary": "Stars and forks of a GitHub repository you choose",
+  "icon": "star",
+  "fetch": { "url": "https://api.github.com/repos/{owner}/{repo}", "every_min": 60 },
+  "layout": "big",
+  "params": [
+    { "key": "owner", "label": "Owner", "type": "text", "default": "espressif" },
+    { "key": "repo", "label": "Repository", "type": "text", "default": "arduino-esp32" }
+  ],
+  "values": [
+    { "label": "Stars", "pick": "stargazers_count", "format": "number" },
+    { "label": "Forks", "pick": "forks_count", "format": "number" }
+  ],
+  "card_line": "{0} stars"
+}

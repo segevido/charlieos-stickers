@@ -1,0 +1,21 @@
+{
+  "format": 1,
+  "id": "fx",
+  "name": "Currency",
+  "version": "1.0.0",
+  "author": "CharlieOS",
+  "summary": "An exchange rate you choose, from the European Central Bank",
+  "icon": "chart",
+  "fetch": { "url": "https://api.frankfurter.dev/v1/latest?base={from}&symbols={to}", "every_min": 240 },
+  "layout": "big",
+  "params": [
+    { "key": "from", "label": "From (e.g. USD)", "type": "text", "default": "USD" },
+    { "key": "to", "label": "To (e.g. EUR)", "type": "text", "default": "EUR" }
+  ],
+  "values": [
+    { "label": "1 unit buys", "pick": "rates.{to}", "format": "number:4" },
+    { "label": "Rate date", "pick": "date", "format": "date" },
+    { "label": "To", "pick": "@to" }
+  ],
+  "card_line": "{0} {2}"
+}

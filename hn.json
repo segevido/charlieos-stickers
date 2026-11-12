@@ -1,0 +1,18 @@
+{
+  "format": 1,
+  "id": "hn",
+  "name": "Hacker News",
+  "version": "1.0.0",
+  "author": "CharlieOS",
+  "summary": "The top story on the Hacker News front page",
+  "icon": "quote",
+  "fetch": { "url": "https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=1", "every_min": 30 },
+  "layout": "quote",
+  "values": [
+    { "label": "Story", "pick": "hits[0].title" },
+    { "label": "Posted by", "pick": "hits[0].author" },
+    { "label": "Points", "pick": "hits[0].points", "format": "number" }
+  ],
+  "card_line": "{2} points",
+  "attribution": "Search by Algolia"
+}

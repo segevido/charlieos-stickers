@@ -1,0 +1,22 @@
+{
+  "format": 1,
+  "id": "btc",
+  "name": "Bitcoin",
+  "version": "1.0.0",
+  "author": "CharlieOS",
+  "summary": "Bitcoin price in US dollars",
+  "icon": "coin",
+  "fetch": {
+    "url": "https://api.coinbase.com/x",
+    "every_min": 1
+  },
+  "layout": "big",
+  "values": [
+    {
+      "label": "BTC in USD",
+      "pick": "data.amount",
+      "format": "money:USD"
+    }
+  ],
+  "card_line": "BTC {0}"
+}

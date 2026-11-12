@@ -1,0 +1,17 @@
+{
+  "format": 1,
+  "id": "quote",
+  "name": "Quote",
+  "version": "1.0.0",
+  "author": "CharlieOS",
+  "summary": "A quote of the day",
+  "icon": "quote",
+  "fetch": { "url": "https://zenquotes.io/api/today", "every_min": 360 },
+  "layout": "quote",
+  "values": [
+    { "label": "Quote", "pick": "[0].q" },
+    { "label": "By", "pick": "[0].a" }
+  ],
+  "card_line": "{1}",
+  "attribution": "Inspirational quotes provided by ZenQuotes API (zenquotes.io)"
+}

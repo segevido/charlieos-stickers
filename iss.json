@@ -1,0 +1,18 @@
+{
+  "format": 1,
+  "id": "iss",
+  "name": "ISS now",
+  "version": "1.0.0",
+  "author": "CharlieOS",
+  "summary": "Where the International Space Station is right now",
+  "icon": "star",
+  "fetch": { "url": "https://api.wheretheiss.at/v1/satellites/25544", "every_min": 5 },
+  "layout": "list",
+  "values": [
+    { "label": "Latitude", "pick": "latitude", "format": "number:1" },
+    { "label": "Longitude", "pick": "longitude", "format": "number:1" },
+    { "label": "Height km", "pick": "altitude", "format": "number:0" },
+    { "label": "km/h", "pick": "velocity", "format": "number:0" }
+  ],
+  "card_line": "{0}, {1}"
+}

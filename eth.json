@@ -1,0 +1,15 @@
+{
+  "format": 1,
+  "id": "eth",
+  "name": "Ethereum",
+  "version": "1.0.0",
+  "author": "CharlieOS",
+  "summary": "Ethereum price in US dollars",
+  "icon": "coin",
+  "fetch": { "url": "https://api.coinbase.com/v2/prices/ETH-USD/spot", "every_min": 15 },
+  "layout": "big",
+  "values": [
+    { "label": "ETH in USD", "pick": "data.amount", "format": "money:USD" }
+  ],
+  "card_line": "ETH {0}"
+}

@@ -1,0 +1,22 @@
+{
+  "format": 1,
+  "id": "airq",
+  "name": "Air quality",
+  "version": "1.0.0",
+  "author": "CharlieOS",
+  "summary": "Air quality index, UV and particles where you are",
+  "icon": "home",
+  "fetch": {
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality?latitude={lat}&longitude={lon}&current=us_aqi,uv_index,pm2_5,pm10",
+    "every_min": 60
+  },
+  "layout": "list",
+  "values": [
+    { "label": "AQI (US)", "pick": "current.us_aqi", "format": "number:0" },
+    { "label": "UV index", "pick": "current.uv_index", "format": "number:1" },
+    { "label": "PM2.5", "pick": "current.pm2_5", "format": "number:0" },
+    { "label": "PM10", "pick": "current.pm10", "format": "number:0" }
+  ],
+  "card_line": "AQI {0}  UV {1}",
+  "attribution": "Air quality data by Open-Meteo.com (CC BY 4.0)"
+}

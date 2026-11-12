@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "since",
+  "name": "Days since",
+  "version": "1.0.0",
+  "author": "CharlieOS",
+  "summary": "Days since a date you choose",
+  "icon": "star",
+  "layout": "countdown",
+  "params": [
+    { "key": "date", "label": "Date", "type": "date", "default": "2026-01-01" },
+    { "key": "title", "label": "Since what?", "type": "text", "default": "New Year" }
+  ],
+  "values": [
+    { "label": "Date", "pick": "@date", "format": "until" },
+    { "label": "Since", "pick": "@title" }
+  ],
+  "card_line": "{1}: {0}"
+}

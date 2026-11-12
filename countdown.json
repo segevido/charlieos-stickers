@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "countdown",
+  "name": "Countdown",
+  "version": "1.0.0",
+  "author": "CharlieOS",
+  "summary": "Days to a date you choose",
+  "icon": "calendar",
+  "layout": "countdown",
+  "params": [
+    { "key": "date", "label": "Date", "type": "date", "default": "2026-12-25" },
+    { "key": "title", "label": "What is it?", "type": "text", "default": "Holiday" }
+  ],
+  "values": [
+    { "label": "Date", "pick": "@date", "format": "until" },
+    { "label": "Event", "pick": "@title" }
+  ],
+  "card_line": "{1} {0}"
+}

@@ -1,0 +1,17 @@
+{
+  "format": 1,
+  "id": "launch",
+  "name": "Next launch",
+  "version": "1.0.0",
+  "author": "CharlieOS",
+  "summary": "Countdown to the next rocket launch anywhere",
+  "icon": "calendar",
+  "fetch": { "url": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/?limit=1&mode=list", "every_min": 60 },
+  "layout": "countdown",
+  "values": [
+    { "label": "Launch", "pick": "results[0].net", "format": "until" },
+    { "label": "Mission", "pick": "results[0].name" }
+  ],
+  "card_line": "Launch {0}",
+  "attribution": "Data from The Space Devs Launch Library 2"
+}

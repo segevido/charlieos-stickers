@@ -1,0 +1,18 @@
+{
+  "format": 1,
+  "id": "xkcd",
+  "name": "xkcd",
+  "version": "1.0.0",
+  "author": "CharlieOS",
+  "summary": "The latest xkcd comic's title and hover text",
+  "icon": "quote",
+  "fetch": { "url": "https://xkcd.com/info.0.json", "every_min": 360 },
+  "layout": "quote",
+  "values": [
+    { "label": "Hover text", "pick": "alt" },
+    { "label": "Title", "pick": "safe_title" },
+    { "label": "Number", "pick": "num", "format": "number" }
+  ],
+  "card_line": "#{2} {1}",
+  "attribution": "xkcd by Randall Munroe, CC BY-NC 2.5"
+}
